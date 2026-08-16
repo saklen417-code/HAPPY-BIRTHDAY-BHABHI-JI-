@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Bhabhi Ji ❤️</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#fff7fa;
+    color:#4b2735;
+    overflow-x:hidden;
+}
+
+/* ---------- Background ---------- */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:#ffd7e5;
+    filter:blur(100px);
+    opacity:.45;
+    border-radius:50%;
+    top:-180px;
+    left:-180px;
+    z-index:-1;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    background:#ffe8b5;
+    filter:blur(100px);
+    opacity:.35;
+    border-radius:50%;
+    bottom:-150px;
+    right:-150px;
+    z-index:-1;
+}
+
+/* ---------- Hero ---------- */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero-content{
+    max-width:900px;
+    animation:fadeUp 1.5s ease;
+}
+
+.small-text{
+    font-size:15px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#a66a7e;
+    margin-bottom:18px;
+}
+
+.hero h1{
+    font-family:'Great Vibes',cursive;
+    font-size:clamp(65px,11vw,145px);
+    line-height:1;
+    color:#c84f76;
+    text-shadow:0 8px 25px rgba(200,79,118,.18);
+}
+
+.hero h2{
+    font-family:'Cormorant Garamond',serif;
+    font-size:clamp(30px,5vw,58px);
+    margin-top:10px;
+    letter-spacing:2px;
+    color:#6b3448;
+}
+
+.hero p{
+    margin:25px auto;
+    max-width:650px;
+    font-size:16px;
+    line-height:1.9;
+    color:#795664;
+}
+
+.start-btn{
+    display:inline-block;
+    padding:15px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#d45a80,#b93f68);
+    box-shadow:0 10px 30px rgba(185,63,104,.25);
+    transition:.3s;
+}
+
+.start-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 15px 35px rgba(185,63,104,.35);
+}
+
+/* ---------- Floating Decorations ---------- */
+
+.decor{
+    position:absolute;
+    pointer-events:none;
+    animation:float 5s ease-in-out infinite;
+}
+
+.heart{
+    font-size:30px;
+}
+
+.flower{
+    font-size:38px;
+}
+
+.d1{top:12%;left:8%}
+.d2{top:20%;right:10%;animation-delay:1s}
+.d3{bottom:15%;left:12%;animation-delay:2s}
+.d4{bottom:12%;right:12%;animation-delay:1.5s}
+.d5{top:48%;left:4%;animation-delay:.5s}
+.d6{top:45%;right:4%;animation-delay:2.5s}
+
+/* ---------- Section ---------- */
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1050px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title span{
+    color:#c84f76;
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    font-weight:500;
+    color:#b84268;
+    margin-top:5px;
+}
+
+/* ---------- Wish Card ---------- */
+
+.wish-card{
+    background:rgba(255,255,255,.8);
+    border:1px solid rgba(200,79,118,.15);
+    border-radius:30px;
+    padding:55px 45px;
+    text-align:center;
+    box-shadow:0 20px 60px rgba(130,65,85,.10);
+    backdrop-filter:blur(10px);
+}
+
+.wish-card .big-heart{
+    font-size:55px;
+    animation:pulse 1.8s infinite;
+}
+
+.wish-card h3{
+    font-family:'Cormorant Garamond',serif;
+    font-size:35px;
+    margin:15px 0;
+    color:#7b3b51;
+}
+
+.wish-card p{
+    font-size:16px;
+    line-height:2;
+    color:#795664;
+}
+
+/* ---------- Gallery ---------- */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.photo{
+    height:330px;
+    border-radius:25px;
+    overflow:hidden;
+    position:relative;
+    background:linear-gradient(135deg,#ffdce8,#fff0d0);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 15px 40px rgba(130,65,85,.12);
+    transition:.4s;
+}
+
+.photo:hover{
+    transform:translateY(-8px) rotate(-1deg);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.photo-placeholder{
+    text-align:center;
+    color:#a66a7e;
+}
+
+.photo-placeholder span{
+    display:block;
+    font-size:50px;
+    margin-bottom:10px;
+}
+
+.photo-placeholder small{
+    font-size:13px;
+}
+
+/* ---------- Message ---------- */
+
+.message{
+    background:linear-gradient(135deg,#fff,#fff2f6);
+    border-radius:35px;
+    padding:65px 35px;
+    text-align:center;
+    position:relative;
+    box-shadow:0 20px 60px rgba(130,65,85,.08);
+}
+
+.message h2{
+    font-family:'Great Vibes',cursive;
+    font-size:65px;
+    color:#c84f76;
+}
+
+.message p{
+    max-width:750px;
+    margin:20px auto 0;
+    line-height:2;
+    color:#795664;
+}
+
+/* ---------- Surprise ---------- */
+
+.surprise-section{
+    text-align:center;
+}
+
+.surprise-btn{
+    border:none;
+    cursor:pointer;
+    padding:18px 38px;
+    border-radius:50px;
+    font-family:'Poppins',sans-serif;
+    font-size:16px;
+    color:#fff;
+    background:linear-gradient(135deg,#d65b81,#b43d65);
+    box-shadow:0 15px 35px rgba(180,61,101,.25);
+    transition:.3s;
+}
+
+.surprise-btn:hover{
+    transform:scale(1.06);
+}
+
+.hidden-message{
+    display:none;
+    margin:35px auto 0;
+    max-width:700px;
+    padding:40px;
+    background:#fff;
+    border-radius:30px;
+    box-shadow:0 20px 60px rgba(130,65,85,.12);
+    animation:fadeUp .8s ease;
+}
+
+.hidden-message.show{
+    display:block;
+}
+
+.hidden-message h3{
+    font-family:'Great Vibes',cursive;
+    font-size:55px;
+    color:#c84f76;
+}
+
+.hidden-message p{
+    line-height:1.9;
+    margin-top:15px;
+}
+
+/* ---------- Footer ---------- */
+
+footer{
+    padding:35px 20px;
+    text-align:center;
+    color:#9a6879;
+    font-size:13px;
+}
+
+footer span{
+    color:#c84f76;
+}
+
+/* ---------- Confetti ---------- */
+
+.confetti{
+    position:fixed;
+    width:9px;
+    height:14px;
+    top:-20px;
+    z-index:9999;
+    pointer-events:none;
+    animation:fall linear forwards;
+}
+
+/* ---------- Animations ---------- */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0) rotate(0deg);
+    }
+    50%{
+        transform:translateY(-25px) rotate(8deg);
+    }
+}
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.15);
+    }
+}
+
+@keyframes fall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:750px){
+
+    .hero{
+        min-height:95vh;
+    }
+
+    .hero h1{
+        font-size:68px;
+    }
+
+    .hero h2{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    section{
+        padding:65px 16px;
+    }
+
+    .section-title h2{
+        font-size:48px;
+    }
+
+    .wish-card{
+        padding:40px 22px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+    }
+
+    .photo{
+        height:380px;
+    }
+
+    .message{
+        padding:50px 22px;
+    }
+
+    .message h2{
+        font-size:50px;
+    }
+
+    .decor{
+        opacity:.6;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="decor heart d1">💗</div>
+    <div class="decor flower d2">🌸</div>
+    <div class="decor heart d3">💖</div>
+    <div class="decor flower d4">🌷</div>
+    <div class="decor heart d5">💕</div>
+    <div class="decor flower d6">🌺</div>
+
+    <div class="hero-content">
+
+        <div class="small-text">
+            A Special Day For A Special Person
+        </div>
+
+        <h1>Happy Birthday</h1>
+
+        <h2>BHABHI JI ❤️</h2>
+
+        <p>
+            Aaj ka din bahut special hai,
+            kyunki ek bahut hi special
+            person ka birthday hai. 🎂✨
+        </p>
+
+        <a href="#wish" class="start-btn">
+            Open Your Birthday Surprise 💝
+        </a>
+
+    </div>
+</section>
+
+
+<!-- WISH -->
+<section id="wish">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>From The Heart</span>
+            <h2>Birthday Wishes</h2>
+        </div>
+
+        <div class="wish-card">
+
+            <div class="big-heart">❤️</div>
+
+            <h3>Dear Bhabhi Ji</h3>
+
+            <p>
+                Aap sirf meri bhabhi nahi, 
+                balki meri ek acchi friend bhi ho. 🥰
+                <br><br>
+
+                Aapki smile hamesha yunhi bani rahe,
+                aapki zindagi khushiyon se bhari rahe,
+                aur aapko har woh khushi mile jo aap deserve karti hain. 🌸
+                <br><br>
+
+                Allah aapki har wish poori kare,
+                aapko hamesha healthy, happy aur blessed rakhe.
+                <br><br>
+
+                <strong>Wishing you a very Happy Birthday Bhabhi Ji! 🎂💖</strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PHOTOS -->
+<section>
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>Beautiful Memories</span>
+            <h2>Special Moments 📸</h2>
+        </div>
+
+        <div class="gallery">
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <span>📷</span>
+                    <small>Add Bhabhi Ji's Photo</small>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <span>🌸</span>
+                    <small>Add A Beautiful Memory</small>
+                </div>
+            </div>
+
+            <div class="photo">
+                <div class="photo-placeholder">
+                    <span>💖</span>
+                    <small>Add Your Favourite Photo</small>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SPECIAL MESSAGE -->
+<section>
+
+    <div class="container">
+
+        <div class="message">
+
+            <h2>You're Truly Special ❤️</h2>
+
+            <p>
+                Aap sirf meri bhabhi nahi, meri ek acchi friend bhi ho. 🥰
+                Aapke saath masti karna, hasi-mazaak karna aur 
+                choti-choti baatein share karna hamesha special lagta hai. ✨
+            
+                <br><br>
+
+                Dua hai ki aapki life mein kabhi happiness ki shortage na ho,
+                har din ek nayi wajah mile smile karne ki, 
+                aur har saal pehle se bhi zyada beautiful ho. 🌷
+                <br><br>
+
+                May your birthday bring you endless happiness,
+                beautiful memories and lots of reasons to smile. ✨
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SURPRISE -->
+<section class="surprise-section">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>One More Thing</span>
+            <h2>There's A Surprise 🎁</h2>
+        </div>
+
+        <button class="surprise-btn" onclick="showSurprise()">
+            🎁 Click For Surprise
+        </button>
+
+        <div class="hidden-message" id="surprise">
+
+            <h3>Happy Birthday Bhabhi Ji! 🎂</h3>
+
+            <p>
+                Aapka aane wala har saal pichhle saal se
+                zyada beautiful ho. 💖
+                <br><br>
+
+                Hamesha khush rahiye, haste rahiye
+                aur apni beautiful smile kabhi mat khoiye. 🌸
+                <br><br>
+
+                <strong>
+                    Lots of love, happiness & blessings for you! ❤️✨
+                </strong>
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+    Made by Saklen specially for my Bhabhi <span>❤️</span>
+</footer>
+
+
+<script>
+
+/* ---------- Surprise ---------- */
+
+function showSurprise(){
+
+    const box = document.getElementById("surprise");
+
+    box.classList.add("show");
+
+    createConfetti();
+
+    setTimeout(() => {
+        box.scrollIntoView({
+            behavior:"smooth",
+            block:"center"
+        });
+    },100);
+
+}
+
+
+/* ---------- Confetti ---------- */
+
+function createConfetti(){
+
+    const symbols = [
+        "💖","💕","✨","🌸","🎉","🎀","❤️","🌷","⭐"
+    ];
+
+    for(let i=0;i<70;i++){
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.innerHTML =
+            symbols[Math.floor(Math.random()*symbols.length)];
+
+        confetti.style.left =
+            Math.random()*100 + "vw";
+
+        confetti.style.fontSize =
+            (12 + Math.random()*18) + "px";
+
+        confetti.style.animationDuration =
+            (3 + Math.random()*4) + "s";
+
+        confetti.style.animationDelay =
+            Math.random()*1.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(()=>{
+            confetti.remove();
+        },8000);
+
+    }
+
+}
+
+
+/* ---------- Automatic Small Hearts ---------- */
+
+setInterval(()=>{
+
+    const heart = document.createElement("div");
+
+    heart.innerHTML = "💗";
+
+    heart.style.position = "fixed";
+    heart.style.left = Math.random()*100 + "vw";
+    heart.style.bottom = "-30px";
+    heart.style.fontSize = (12 + Math.random()*15) + "px";
+    heart.style.opacity = ".55";
+    heart.style.pointerEvents = "none";
+    heart.style.zIndex = "5";
+
+    heart.animate(
+        [
+            {
+                transform:"translateY(0)",
+                opacity:.6
+            },
+            {
+                transform:"translateY(-110vh)",
+                opacity:0
+            }
+        ],
+        {
+            duration:6000,
+            easing:"linear"
+        }
+    );
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },6000);
+
+},1800);
+
+</script>
+
+</body>
+</html>
